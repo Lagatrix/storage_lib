@@ -19,7 +19,7 @@ class TestSizeUtils(unittest.TestCase):
         self.assertEqual(bytes_to_understandable_sizes(1152921504606846976), "1.00 EB")
         self.assertEqual(bytes_to_understandable_sizes(1180591620717411303424), "1.00 ZB")
         self.assertEqual(bytes_to_understandable_sizes(1208925819614629174706176), "1.00 YB")
-        self.assertEqual(bytes_to_understandable_sizes(1000 * (2**80)), "1000.00 YB")
+        self.assertEqual(bytes_to_understandable_sizes(1000 * (3**80)), "119399021538774.06 YB")
         self.assertEqual(bytes_to_understandable_sizes(1000204886016), "931.51 GB")
 
     def test_percentage_of_size_partition_in_disk(self) -> None:

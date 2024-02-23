@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 ## Added
-- @javierfh03 - Add partition getter and utils to manage the sizes with tests and mocks
+- @javierfh03 - Add partition getter and utils to manage the sizes with tests and mocks.
+- @javierfh03 - Add disk getter and utils to manage the sizes with tests and mocks.
 
 [Unreleased]: https://github.com/Lagatrix/storage_lib.git
