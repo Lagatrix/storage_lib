@@ -33,6 +33,7 @@ class DiskGetter:
 
         for data_row in data_list:
             data: list[str] = re.sub(r'\s', ':', re.sub(r'\s+', " ", data_row), 2).split(":")
+
             byte_size: int = int(data[1])
 
             yield Disk(data[0], data[2], bytes_to_understandable_sizes(byte_size), byte_size, [])

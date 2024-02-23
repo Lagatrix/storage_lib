@@ -36,7 +36,6 @@ class PartitionGetter:
 
         for data_row in data_list:
             data: list[str] = data_row.split()
-            print(data)
 
             if len(data) < 2:
                 disk_list[-1].mount_points.append(data[0])
