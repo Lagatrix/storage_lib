@@ -5,7 +5,6 @@ from typing import AsyncIterable
 from shell_executor_lib import CommandManager
 
 from storage_lib.entities import Disk
-from storage_lib.utils.size_utils import bytes_to_understandable_sizes
 
 
 class DiskGetter:
@@ -36,4 +35,4 @@ class DiskGetter:
 
             byte_size: int = int(data[1])
 
-            yield Disk(data[0], data[2], bytes_to_understandable_sizes(byte_size), byte_size, [])
+            yield Disk(data[0], data[2], byte_size, [])

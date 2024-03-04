@@ -2,7 +2,6 @@
 from shell_executor_lib import CommandManager
 
 from storage_lib.entities import Partition
-from storage_lib.utils.size_utils import bytes_to_understandable_sizes, percentage_of_size_partition_in_disk
 
 
 class PartitionGetter:
@@ -45,8 +44,6 @@ class PartitionGetter:
                 mount_point_list: list[str] = [data[3]] if len(data) > 3 else []
                 use: str = data[4] if len(data) > 4 else "None"
 
-                disk_list.append(Partition(data[0], type_format, bytes_to_understandable_sizes(byte_size), byte_size,
-                                           use, percentage_of_size_partition_in_disk(byte_size, disk_size_in_bytes),
-                                           mount_point_list))
+                disk_list.append(Partition(data[0], type_format, byte_size, use, mount_point_list))
 
         return disk_list
