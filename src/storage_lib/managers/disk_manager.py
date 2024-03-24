@@ -21,7 +21,7 @@ class DiskManager:
         disk_list: list[Disk] = []
 
         async for disk in self.__disk_getter.get_disks():
-            disk.partitions = await self.__partition_getter.get_partitions(disk.name, disk.size_in_bytes)
+            disk.partitions = await self.__partition_getter.get_partitions(disk.name)
             disk_list.append(disk)
 
         return disk_list

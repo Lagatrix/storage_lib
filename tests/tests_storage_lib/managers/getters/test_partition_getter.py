@@ -19,11 +19,11 @@ class TestPartitionGetter(unittest.IsolatedAsyncioTestCase):
     async def test_get_partitions_sda(self) -> None:
         """Test get the partitions of sda disk."""
         with mock.patch(mock_command_executor_method, return_value=mock_partitions_sda):
-            self.assertEqual(await self.partition_getter.get_partitions("/dev/sda/", 1000204886016),
+            self.assertEqual(await self.partition_getter.get_partitions("/dev/sda/"),
                              mock_partitions_sda_entity)
 
     async def test_get_partitions_sdb(self) -> None:
         """Test get the partitions of sdb disk."""
         with mock.patch(mock_command_executor_method, return_value=mock_partitions_sdb):
-            self.assertEqual(await self.partition_getter.get_partitions("/dev/sdb/", 480103981056),
+            self.assertEqual(await self.partition_getter.get_partitions("/dev/sdb/"),
                              mock_partitions_sdb_entity)

@@ -15,12 +15,11 @@ class PartitionGetter:
         """
         self.__command_manager: CommandManager = command_manager
 
-    async def get_partitions(self, disk_name: str, disk_size_in_bytes: int) -> list[Partition]:
+    async def get_partitions(self, disk_name: str) -> list[Partition]:
         """Get the partitions of the disk.
 
         Args:
             disk_name: The disk to get the partitions.
-            disk_size_in_bytes: The size of the disk in bytes.
 
         Returns:
             The partitions of the disk
